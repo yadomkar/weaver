@@ -1,9 +1,20 @@
 import { FC } from 'react';
+import { DropdownMenu, DropdownMenuTrigger } from './ui/DropdownMenu';
+import { User } from 'next-auth';
+import UserAvatar from './UserAvatar';
 
-interface UserAccountNavProps {}
+interface UserAccountNavProps {
+  user: Pick<User, 'name' | 'image' | 'email'>;
+}
 
-const UserAccountNav: FC<UserAccountNavProps> = ({}) => {
-  return <div>UserAccountNav</div>;
+const UserAccountNav: FC<UserAccountNavProps> = ({ user }) => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <UserAvatar user={user} />
+      </DropdownMenuTrigger>
+    </DropdownMenu>
+  );
 };
 
 export default UserAccountNav;
