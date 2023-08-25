@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata = {
-  title: 'Breadit',
+  title: 'Weaver',
   description: 'A Reddit clone built with Next.js and TypeScript.',
 };
 
